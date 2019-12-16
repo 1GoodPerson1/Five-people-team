@@ -1,0 +1,71 @@
+﻿@model IEnumerable<LBH_EF_DAL.baoxiu>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.baoname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.baofang)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.wupin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.shijian)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ischuli)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.chushijian)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.baoname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.baofang)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.wupin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.shijian)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ischuli)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.chushijian)
+            </td>
+            <td>
+                @Html.ActionLink("编辑", "Update", new { id=item.baoid }) |
+                @Html.ActionLink("Details", "Details", new { id=item.baoid }) |
+                @Html.ActionLink("删除", "Delete", new { id=item.baoid })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

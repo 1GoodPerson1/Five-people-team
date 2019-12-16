@@ -1,0 +1,47 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+
+</head>
+<body>
+    <div>
+        <input id="text1" type="text" />
+        <input id="text2" type="text" />
+        <input id="Button1" type="button" value="登录" />
+    </div>
+    <script src="~/js/jquery-1.7.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#Button1").click(function () {
+                var name = $("#text1").val();
+                var password = $("#text2").val();
+                $.ajax({
+                    url: "/Default/sel",
+                    dateType: "json",
+                    type: "post",
+                    data: { "UserName": name, "UserPwd": password },
+                    success: function (refult) {
+                        if (refult == 0) {
+                            alert("用户名或者密码错误！");
+                        } else if (refult.Data.data != null) {
+                            alert("登录成功");
+                            window.location.href = "/Default/Index";
+                        }
+                    }
+                })
+            })
+        })
+    </script>
+</body>
+
+    
+
+</html>
