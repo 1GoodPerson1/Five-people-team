@@ -64,22 +64,55 @@
                         <tr>
                             <td>年龄：</td>
                             <td> <input type="text" name="name" /></td>
+                    </table>
+                    <input class="btn" name="nr2" type="button" value="下一页" />
+                </div>
+                <div class="nei" id="nr2">
+                    <table>
+                        <tr>
+                            <td>学号：</td>
+                            <td> <input type="text" name="name" /></td>
                         </tr>
-                                                <tr>
-                            <td>姓名：</td>
+                        <tr>
+                            <td> 职位：</td>
+                            <td> <input type="text" name="name" /></td>
+                        </tr>
+                        <tr>
+                            <td>  薪资：</td>
                             <td> <input type="text" name="name" /></td>
                         </tr>
                     </table>
+                    <input class="btn" name="nr3" type="button" value="下一页" />
                 </div>
-                <div class="nei" id="nr2">内容2</div>
-                <div class="nei" id="nr3">内容3</div>
+                <div class="nei" id="nr3">
+                    <table>
+                        <tr>
+                            <td>学号：</td>
+                            <td> <input type="text" name="name" /></td>
+                        </tr>
+                        <tr>
+                            <td> 备注：</td>
+                            <td> <input type="text" name="name" /></td>
+                        </tr>
+                        <tr>
+                            <td>   时间：</td>
+                            <td> <input type="text" name="name" /></td>
+                        </tr>
+                    </table>
+                    <input type="button" value="提交" />
+                    <input type="button" value="查看" />
+                </div>
             </form>
         </div>
     </div>
     <script>
         $(document).ready(function () {
             $(".tou").click(function () {
-                $(".nei").css("display","none")
+                $(".nei").css("display", "none")
+                $("#" + $(this).attr("name")).css("display", "block")
+            })
+            $(".btn").click(function () {
+                $(".nei").css("display", "none")
                 $("#" + $(this).attr("name")).css("display", "block")
             })
         });

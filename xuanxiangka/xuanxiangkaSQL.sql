@@ -50,3 +50,4 @@ wtime date ,--入职时间
 insert zhunbei values(1,'','2019-01-01')
 insert zhunbei values(2,'','2020-01-01')
 insert zhunbei values(3,'','2020-01-01')
+select * from zhunbei
