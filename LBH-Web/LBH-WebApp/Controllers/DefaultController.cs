@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using LBH_EF_DAL;
 using Newtonsoft.Json;
+using System.IO;
 
 
 
@@ -91,5 +92,23 @@ namespace LBH_WebApp.Controllers
                 return Json(jsonResult, JsonRequestBehavior.AllowGet);
             }
         }
+        [AllowAnonymous]
+        [HttpPost]
+        public ActionResult ProcessUploadFiles(IEnumerable<HttpPostedFileBase> filenames)
+        {
+            foreach (var file in filenames)
+            {
+                var filename = Path.GetFileName(file.FileName);
+                var path = Path.Combine(Server.MapPath("~/Upload"), filename);
+                file.SaveAs(path);
+            }
+            return RedirectToAction("Index");
+        }
+        [AllowAnonymous]
+        public ActionResult fileInputIndex()
+        {
+            return View();
+        }
+        
     }
 }
