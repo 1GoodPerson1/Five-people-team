@@ -8,10 +8,10 @@ if exists(select * from sys.tables where name='loginUser')
 drop table loginUser
 go
 create table loginUser(
-   Userid int identity(1,1) primary key,
-   userName varchar(50) not null,
-   userPwd varchar(100) not null, 
-   Userinfo bit check(Userinfo=0 or Userinfo=1),
+   Userid int identity(1,1) primary key,--id  主键
+   userName varchar(50) not null,--用户名
+   userPwd varchar(100) not null, --用户密码
+   Userinfo bit check(Userinfo=0 or Userinfo=1),--用户角色 男  女
 )
 insert into loginUser values('李彬辉','123456',1)
 insert into loginUser values('代梦丽','123456',0)
@@ -35,7 +35,7 @@ create table BoyInfo(
  boyAddress varchar(50) not null,--地址
  boyHobbly  varchar(100) ,--爱好
  boymate varchar(500) not null,--择偶标准
- boyimg varchar(max),
+ boyimg varchar(max),--图片路径
  boyimg1 varchar(max),
  boyimg2 varchar(max),
 )
