@@ -1,0 +1,14 @@
+D:\Users\Desktop\新建文件夹\Five-people-team\小组项目\MVC\EF\bin\Debug\EF.dll.config
+D:\Users\Desktop\新建文件夹\Five-people-team\小组项目\MVC\EF\bin\Debug\EF.dll
+D:\Users\Desktop\新建文件夹\Five-people-team\小组项目\MVC\EF\bin\Debug\EF.pdb
+D:\Users\Desktop\新建文件夹\Five-people-team\小组项目\MVC\EF\bin\Debug\EntityFramework.dll
+D:\Users\Desktop\新建文件夹\Five-people-team\小组项目\MVC\EF\bin\Debug\EntityFramework.SqlServer.dll
+D:\Users\Desktop\新建文件夹\Five-people-team\小组项目\MVC\EF\bin\Debug\log4net.dll
+D:\Users\Desktop\新建文件夹\Five-people-team\小组项目\MVC\EF\bin\Debug\EntityFramework.xml
+D:\Users\Desktop\新建文件夹\Five-people-team\小组项目\MVC\EF\bin\Debug\EntityFramework.SqlServer.xml
+D:\Users\Desktop\新建文件夹\Five-people-team\小组项目\MVC\EF\bin\Debug\log4net.xml
+D:\Users\Desktop\新建文件夹\Five-people-team\小组项目\MVC\EF\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\Users\Desktop\新建文件夹\Five-people-team\小组项目\MVC\EF\obj\Debug\EF.csproj.CoreCompileInputs.cache
+D:\Users\Desktop\新建文件夹\Five-people-team\小组项目\MVC\EF\obj\Debug\EF.csproj.CopyComplete
+D:\Users\Desktop\新建文件夹\Five-people-team\小组项目\MVC\EF\obj\Debug\EF.dll
+D:\Users\Desktop\新建文件夹\Five-people-team\小组项目\MVC\EF\obj\Debug\EF.pdb
