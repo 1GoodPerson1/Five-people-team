@@ -166,3 +166,4 @@ C:\Users\李彬辉\Desktop\Five-people-team\LBH-Web\LBH-WebApp\bin\Newtonsoft.Js
 C:\Users\李彬辉\Desktop\Five-people-team\LBH-Web\LBH-WebApp\bin\Newtonsoft.Json.xml
 C:\Users\李彬辉\Desktop\Five-people-team\LBH-Web\LBH-WebApp\bin\log4net.dll
 C:\Users\李彬辉\Desktop\Five-people-team\LBH-Web\LBH-WebApp\bin\log4net.xml
+C:\Users\李彬辉\Desktop\Five-people-team\LBH-Web\LBH-WebApp\bin\HPIT.Data.Core.dll

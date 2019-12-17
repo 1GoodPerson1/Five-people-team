@@ -50,6 +50,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="HPIT.Data.Core">
+      <HintPath>..\..\..\新建文件夹\HPIT.Data.Core.dll</HintPath>
+    </Reference>
     <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
     </Reference>
@@ -101,13 +104,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\paging.css" />
     <Content Include="Global.asax" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\common.js" />
+    <Content Include="js\jquery-1.11.3.min.js" />
     <Content Include="js\jquery-1.7.js" />
+    <Content Include="js\jquery-2.1.1.min.js" />
+    <Content Include="js\jquery-3.3.1.min.js" />
+    <Content Include="js\jquery.tmpl.js" />
+    <Content Include="js\paging.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\DeluxeJsonResult.cs" />
+    <Compile Include="Controllers\FileModel.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="filer\MyfilterAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -122,6 +138,8 @@
     <Content Include="Views\Default\Update.cshtml" />
     <Content Include="Views\Default\Login.cshtml" />
     <Content Include="Views\Default\fileInputIndex.cshtml" />
+    <Content Include="Views\Default\FileListIndex.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

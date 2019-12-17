@@ -1,0 +1,57 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>FileListIndex</title>
+    <link href="~/css/paging.css" rel="stylesheet" />
+    <link href="~/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <table id="ListTb" class="table table-bordered">
+            <tr>
+                <th>文件名</th>
+                <th>目录</th>
+                <th>修改时间</th>
+                <th>全名</th>
+                <th>操作</th>
+            </tr>
+        </table>
+        <div class="pagebox" style="height:30px;" id="box"></div>
+        <script id="dataList" type="text/x-jquery-tmpl">
+            {{each Data}}
+            <tr>
+                <td>${filename}</td>
+                <td>${path}</td>
+                <td>${time}</td>
+                <td>${fullname}</td>
+                <td>
+                    <a href="/Default/download?filename=${filename}" type="dicEdit" tid="${filename}">下载</a>
+                </td>
+            </tr>
+            {{/each}}
+        </script>
+    </div>
+    <script src="~/js/jquery-2.1.1.min.js"></script>
+    <script src="~/js/jquery.tmpl.js"></script>
+    <script src="~/js/bootstrap.js"></script>
+    <script src="~/js/paging.js"></script>
+    <script src="~/js/common.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        var dic = {
+            queryList: function () {
+                _.queryList("/Default/GetFileList", { "PageIndex": 0, "PageSize": 3 });
+            }
+        }
+        $(document).ready(function () {
+            dic.queryList();
+        })
+    </script>
+</body>
+</html>

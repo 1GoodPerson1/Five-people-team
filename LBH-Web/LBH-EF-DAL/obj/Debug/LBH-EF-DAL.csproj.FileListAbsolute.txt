@@ -57,4 +57,4 @@ C:\Users\李彬辉\Desktop\Five-people-team\LBH-Web\LBH-EF-DAL\bin\Debug\zh-Hans
 C:\Users\李彬辉\Desktop\Five-people-team\LBH-Web\LBH-EF-DAL\bin\Debug\zh-Hans\Microsoft.VisualStudio.Shell.15.0.resources.dll
 C:\Users\李彬辉\Desktop\Five-people-team\LBH-Web\LBH-EF-DAL\bin\Debug\zh-Hans\Microsoft.VisualStudio.Shell.Design.resources.dll
 C:\Users\李彬辉\Desktop\Five-people-team\LBH-Web\LBH-EF-DAL\bin\Debug\zh-Hans\Microsoft.VisualStudio.GraphModel.resources.dll
-C:\Users\李彬辉\Desktop\Five-people-team\LBH-Web\LBH-EF-DAL\obj\Debug\LBH-EF-DAL.csprojAssemblyReference.cache
+C:\Users\李彬辉\Desktop\Five-people-team\LBH-Web\LBH-EF-DAL\bin\Debug\HPIT.Data.Core.dll
