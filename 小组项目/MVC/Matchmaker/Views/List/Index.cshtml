@@ -1,10 +1,8 @@
-﻿
-@{
+﻿@{
     Layout = null;
+    int sesson = Convert.ToInt32(ViewData["sesson"]);
 }
-
 <!DOCTYPE html>
-
 <html>
 <head>
     <!-- Required meta tags -->
@@ -17,12 +15,18 @@
     <link rel="stylesheet" href="~/css/vendor.bundle.base.css">
     <!-- endinject -->
     <!-- inject:css -->
-    <link rel="stylesheet" href="~/css/style1.css">
+    <link rel="stylesheet" href="~/css/style.css">
     <!-- endinject -->
     <link rel="shortcut icon" href="~/image/favicon.png" />
     <title>Index</title>
+
 </head>
 <body>
+    @sesson
+    @if (sesson==0)
+    {
+
+    }
     <div class="container-scroller">
         <!-- partial:partials/_navbar.html -->
         <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
@@ -62,70 +66,6 @@
                                 <i class="mdi mdi-logout mr-2 text-primary"></i>
                                 Signout
                             </a>
-                        </div>
-                    </li>
-                    <li class="nav-item d-none d-lg-block full-screen-link">
-                        <a class="nav-link">
-                            <i class="mdi mdi-fullscreen" id="fullscreen-button"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
-                            <i class="mdi mdi-email-outline"></i>
-                            <span class="count-symbol bg-warning"></span>
-                        </a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
-                            <i class="mdi mdi-bell-outline"></i>
-                            <span class="count-symbol bg-danger"></span>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
-                            <h6 class="p-3 mb-0">消息</h6>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item preview-item">
-                                <div class="preview-thumbnail">
-                                    <div class="preview-icon bg-success">
-                                        <i class="mdi mdi-calendar"></i>
-                                    </div>
-                                </div>
-                                <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
-                                    <h6 class="preview-subject font-weight-normal mb-1">Event today</h6>
-                                    <p class="text-gray ellipsis mb-0">
-                                        Just a reminder that you have an event today
-                                    </p>
-                                </div>
-                            </a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item preview-item">
-                                <div class="preview-thumbnail">
-                                    <div class="preview-icon bg-warning">
-                                        <i class="mdi mdi-settings"></i>
-                                    </div>
-                                </div>
-                                <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
-                                    <h6 class="preview-subject font-weight-normal mb-1">Settings</h6>
-                                    <p class="text-gray ellipsis mb-0">
-                                        Update dashboard
-                                    </p>
-                                </div>
-                            </a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item preview-item">
-                                <div class="preview-thumbnail">
-                                    <div class="preview-icon bg-info">
-                                        <i class="mdi mdi-link-variant"></i>
-                                    </div>
-                                </div>
-                                <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
-                                    <h6 class="preview-subject font-weight-normal mb-1">Launch Admin</h6>
-                                    <p class="text-gray ellipsis mb-0">
-                                        New admin wow!
-                                    </p>
-                                </div>
-                            </a>
-                            <div class="dropdown-divider"></div>
-                            <h6 class="p-3 mb-0 text-center">See all notifications</h6>
                         </div>
                     </li>
                     <li class="nav-item nav-logout d-none d-lg-block">
@@ -168,9 +108,9 @@
                             <i class="mdi mdi-home menu-icon"></i>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" id="laoban">
                         <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                            <span class="menu-title">人员</span>
+                            <span id="span" class="menu-title">@sesson</span>
                             <i class="menu-arrow"></i>
                             <i class="mdi mdi-crosshairs-gps menu-icon"></i>
                         </a>
@@ -376,48 +316,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-12 grid-margin stretch-card">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title">Recent Updates</h4>
-                                    <div class="d-flex">
-                                        <div class="d-flex align-items-center mr-4 text-muted font-weight-light">
-                                            <i class="mdi mdi-account-outline icon-sm mr-2"></i>
-                                            <span>jack Menqu</span>
-                                        </div>
-                                        <div class="d-flex align-items-center text-muted font-weight-light">
-                                            <i class="mdi mdi-clock icon-sm mr-2"></i>
-                                            <span>October 3rd, 2018</span>
-                                        </div>
-                                    </div>
-                                    <div class="row mt-3">
-                                        <div class="col-6 pr-1">
-                                            <img src="images/dashboard/img_1.jpg" class="mb-2 mw-100 w-100 rounded" alt="image">
-                                            <img src="images/dashboard/img_4.jpg" class="mw-100 w-100 rounded" alt="image">
-                                        </div>
-                                        <div class="col-6 pl-1">
-                                            <img src="images/dashboard/img_2.jpg" class="mb-2 mw-100 w-100 rounded" alt="image">
-                                            <img src="images/dashboard/img_3.jpg" class="mw-100 w-100 rounded" alt="image">
-                                        </div>
-                                    </div>
-                                    <div class="d-flex mt-5 align-items-top">
-                                        <img src="images/faces/face3.jpg" class="img-sm rounded-circle mr-3" alt="image">
-                                        <div class="mb-0 flex-grow">
-                                            <h5 class="mr-2 mb-2">School Website - Authentication Module.</h5>
-                                            <p class="mb-0 font-weight-light">
-                                                It is a long established fact that a reader will be distracted by the readable
-                                                content of a page.
-                                            </p>
-                                        </div>
-                                        <div class="ml-auto">
-                                            <i class="mdi mdi-heart-outline text-muted"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
                     <div class="row">
                         <div class="col-md-12 grid-margin stretch-card">
                             <div class="card">
@@ -571,5 +470,17 @@
     <!-- Custom js for this page-->
     <script src="~/js/dashboard.js"></script>
     <!-- End custom js for this page-->
+    <script src="~/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var ss = $("#span").text();
+            
+            if (ss == "0") {
+                $("#laoban").css("display", "none");
+            } else {
+                $("#span").text("人员");
+            }
+        })
+    </script>
 </body>
 </html>

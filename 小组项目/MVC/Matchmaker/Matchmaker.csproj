@@ -175,10 +175,11 @@
     <Content Include="Content\Site.css" />
     <Content Include="css\materialdesignicons.css" />
     <Content Include="css\materialdesignicons.min.css" />
-    <Content Include="css\style1.css" />
-    <Content Include="css\styles.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\styles1.css" />
     <Content Include="css\vendor.bundle.base.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\materialdesignicons-webfont.svg" />
     <Content Include="Global.asax" />
     <Content Include="image\1.jpg" />
     <Content Include="image\2.jpg" />
@@ -226,6 +227,7 @@
     <Content Include="js\chart.js" />
     <Content Include="js\dashboard.js" />
     <Content Include="js\file-upload.js" />
+    <Content Include="js\jquery-2.1.1.min.js" />
     <Content Include="js\misc.js" />
     <Content Include="js\off-canvas.js" />
     <Content Include="js\vendor.bundle.addons.js" />
@@ -233,6 +235,20 @@
     <Content Include="obj\Debug\Matchmaker.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\Matchmaker.dll" />
     <Content Include="obj\Debug\Matchmaker.pdb" />
+    <Content Include="pages\charts\chartjs.html" />
+    <Content Include="pages\forms\basic_elements.html" />
+    <Content Include="pages\icons\mdi.html" />
+    <Content Include="pages\samples\blank-page.html" />
+    <Content Include="pages\samples\error-404.html" />
+    <Content Include="pages\samples\error-500.html" />
+    <Content Include="pages\samples\login.html" />
+    <Content Include="pages\samples\register.html" />
+    <Content Include="pages\tables\basic-table.html" />
+    <Content Include="pages\ui-features\buttons.html" />
+    <Content Include="pages\ui-features\typography.html" />
+    <Content Include="partials\_footer.html" />
+    <Content Include="partials\_navbar.html" />
+    <Content Include="partials\_sidebar.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
@@ -253,11 +269,40 @@
     <Content Include="bin\roslyn\vbc.exe.config" />
     <Content Include="bin\roslyn\vbc.rsp" />
     <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include="fonts\Ubuntu\Ubuntu-Bold.eot" />
+    <Content Include="fonts\Ubuntu\Ubuntu-Bold.ttf" />
+    <Content Include="fonts\Ubuntu\Ubuntu-Bold.woff" />
+    <Content Include="fonts\Ubuntu\Ubuntu-Bold.woff2" />
+    <Content Include="fonts\Ubuntu\Ubuntu-Light.eot" />
+    <Content Include="fonts\Ubuntu\Ubuntu-Light.ttf" />
+    <Content Include="fonts\Ubuntu\Ubuntu-Light.woff" />
+    <Content Include="fonts\Ubuntu\Ubuntu-Light.woff2" />
+    <Content Include="fonts\Ubuntu\Ubuntu-Medium.eot" />
+    <Content Include="fonts\Ubuntu\Ubuntu-Medium.ttf" />
+    <Content Include="fonts\Ubuntu\Ubuntu-Medium.woff" />
+    <Content Include="fonts\Ubuntu\Ubuntu-Medium.woff2" />
+    <Content Include="fonts\Ubuntu\Ubuntu-Regular.eot" />
+    <Content Include="fonts\Ubuntu\Ubuntu-Regular.ttf" />
+    <Content Include="fonts\Ubuntu\Ubuntu-Regular.woff" />
+    <Content Include="fonts\Ubuntu\Ubuntu-Regular.woff2" />
+    <Content Include="fonts\materialdesignicons-webfont.eot" />
+    <Content Include="fonts\materialdesignicons-webfont.ttf" />
+    <Content Include="fonts\materialdesignicons-webfont.woff" />
+    <Content Include="fonts\materialdesignicons-webfont.woff2" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Web.config" />
+    <Content Include="vendors\css\vendor.bundle.base.css" />
+    <Content Include="vendors\iconfonts\mdi\css\materialdesignicons.css" />
+    <Content Include="vendors\iconfonts\mdi\css\materialdesignicons.min.css" />
+    <Content Include="vendors\iconfonts\mdi\fonts\materialdesignicons-webfont.svg" />
+    <Content Include="vendors\iconfonts\mdi\preview.html" />
+    <Content Include="vendors\js\vendor.bundle.addons.js" />
+    <Content Include="vendors\js\vendor.bundle.base.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -288,6 +333,23 @@
     <Content Include="scss\_path.scss" />
     <Content Include="scss\_variables.scss" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="vendors\iconfonts\mdi\bower.json" />
+    <Content Include="vendors\iconfonts\mdi\css\materialdesignicons.css.map" />
+    <Content Include="vendors\iconfonts\mdi\css\materialdesignicons.min.css.map" />
+    <Content Include="vendors\iconfonts\mdi\fonts\materialdesignicons-webfont.eot" />
+    <Content Include="vendors\iconfonts\mdi\fonts\materialdesignicons-webfont.ttf" />
+    <Content Include="vendors\iconfonts\mdi\fonts\materialdesignicons-webfont.woff" />
+    <Content Include="vendors\iconfonts\mdi\fonts\materialdesignicons-webfont.woff2" />
+    <Content Include="vendors\iconfonts\mdi\license.md" />
+    <Content Include="vendors\iconfonts\mdi\package.json" />
+    <Content Include="vendors\iconfonts\mdi\scss\materialdesignicons.scss" />
+    <Content Include="vendors\iconfonts\mdi\scss\_animated.scss" />
+    <Content Include="vendors\iconfonts\mdi\scss\_core.scss" />
+    <Content Include="vendors\iconfonts\mdi\scss\_extras.scss" />
+    <Content Include="vendors\iconfonts\mdi\scss\_functions.scss" />
+    <Content Include="vendors\iconfonts\mdi\scss\_icons.scss" />
+    <Content Include="vendors\iconfonts\mdi\scss\_path.scss" />
+    <Content Include="vendors\iconfonts\mdi\scss\_variables.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -299,6 +361,12 @@
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
     <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EF\EF.csproj">
+      <Project>{d17adafe-f12a-4862-a9e1-ee0423bc4e43}</Project>
+      <Name>EF</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

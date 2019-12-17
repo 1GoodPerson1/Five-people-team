@@ -11,6 +11,10 @@ namespace Matchmaker.Controllers
         // GET: List
         public ActionResult Index()
         {
+            if (Session["shenfen"] != null)
+            {
+                ViewData["sesson"] = Session["shenfen"];
+            }
             return View();
         }
 

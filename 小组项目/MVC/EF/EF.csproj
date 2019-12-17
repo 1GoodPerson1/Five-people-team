@@ -59,6 +59,7 @@
     <Compile Include="biao\loginUser.cs" />
     <Compile Include="biao\Model1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserDal.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

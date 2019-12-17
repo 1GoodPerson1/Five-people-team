@@ -11,13 +11,14 @@ create table loginUser(
    Userid int identity(1,1) primary key,--id  主键
    userName varchar(50) not null,--用户名
    userPwd varchar(100) not null, --用户密码
-   Userinfo bit check(Userinfo=0 or Userinfo=1),--用户角色 男  女
+   Userinfo bit check(Userinfo=0 or Userinfo=1 or Userinfo=2),--用户角色 男  女
 )
-insert into loginUser values('李彬辉','123456',1)
-insert into loginUser values('代梦丽','123456',0)
-insert into loginUser values('谷相博','123456',1)
-insert into loginUser values('王莹莹','123456',0)
-
+insert into loginUser values('libinhui@qq.com','123456',1)
+insert into loginUser values('baiyajun@qq.com','123456',0)
+insert into loginUser values('daimengli@163.com','123456',0)
+insert into loginUser values('guxaingbo@qq.com','123456',0)
+insert into loginUser values('wangyingying@163.com','123456',0)
+select * from  loginUser
 --boyInfo
 if exists(select * from sys.tables where name='BoyInfo')
 drop table BoyInfo

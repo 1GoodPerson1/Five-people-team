@@ -1,6 +1,7 @@
 ﻿
 @{
     Layout = null;
+    
 }
 
 <!DOCTYPE html>
@@ -19,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,700" rel="stylesheet">
 
     <!-- Custom Styles -->
-    <link rel="stylesheet" type="text/css" href="~/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="~/css/styles1.css">
     <title>Index</title>
 </head>
 <body>
@@ -38,7 +39,7 @@
             <div class="col-lg-8">
                 <div class="login">
 
-                    <h1>登录</h1>
+                    <h1>登录</h1>``   `
 
                     <!-- Loging form -->
                     <form>
@@ -58,12 +59,12 @@
                             </label>
                             <label class="form-check-label" for="exampleCheck1">记住密码</label>
 
-                            <label class="forgot-password"><a href="#">忘记密码?<a></label>
+                            <label class="forgot-password"><a href="#">忘记密码?</a></label>
 
                         </div>
 
                         <br>
-                        <button type="submit" class="btn btn-lg btn-block btn-success">登录</button>
+                        <button id="Button1" type="submit" class="btn btn-lg btn-block btn-success">登录</button>
                     </form>
                     <!-- End Loging form -->
 
@@ -71,6 +72,29 @@
             </div>
         </div>
     </div>
-
+    <script src="~/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#Button1").click(function () {
+                alert("1111");
+                var name = $("#exampleInputEmail1").val();
+                var password = $("#exampleInputPassword1").val();
+                $.ajax({
+                    url: "/Login/sel",
+                    dateType: "json",
+                    type: "post",
+                    data: { "userName": name, "userPwd": password },
+                    success: function (refult) {
+                        if (refult == 0) {
+                            alert("用户名或者密码错误！");
+                        } else if (refult.Data.data != null) {
+                            alert("登录成功");
+                            window.location.href = "/List/Index";
+                        }
+                    }
+                })
+            })
+        })
+    </script>
 </body>
 </html>
