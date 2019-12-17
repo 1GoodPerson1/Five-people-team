@@ -308,6 +308,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ListController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\PerInfoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -350,6 +351,7 @@
     <Content Include="vendors\iconfonts\mdi\scss\_icons.scss" />
     <Content Include="vendors\iconfonts\mdi\scss\_path.scss" />
     <Content Include="vendors\iconfonts\mdi\scss\_variables.scss" />
+    <Content Include="Views\PerInfo\Perinfo.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
