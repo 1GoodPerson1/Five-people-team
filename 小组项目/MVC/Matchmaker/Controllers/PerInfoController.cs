@@ -11,6 +11,10 @@ namespace Matchmaker.Controllers
         // GET: PerInfo
         public ActionResult Perinfo()
         {
+            if (Session["shenfen"] != null)
+            {
+                ViewData["sesson"] = Session["shenfen"];
+            }
             return View();
         }
     }

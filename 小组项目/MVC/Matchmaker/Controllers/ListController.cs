@@ -14,6 +14,7 @@ namespace Matchmaker.Controllers
             if (Session["shenfen"] != null)
             {
                 ViewData["sesson"] = Session["shenfen"];
+                ViewData["name"] = Session["name"];
             }
             return View();
         }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Newtonsoft.Json;
+using EF.biao;
 using EF;
 
 namespace Matchmaker.Controllers
@@ -33,6 +34,7 @@ namespace Matchmaker.Controllers
                 Response.Cookies.Add(cookie);
                 Session["user"] = user;
                 Session["shenfen"] = user.Userinfo;
+                Session["name"] = user.userName;
                 jsonResult.Data = new { data = user, state = "200" };
                 //LogHelper.Default.WriteInfo(user.UserName + "登录");
                 return Json(jsonResult, JsonRequestBehavior.AllowGet);

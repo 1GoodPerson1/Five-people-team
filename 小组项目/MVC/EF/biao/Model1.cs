@@ -1,4 +1,4 @@
-namespace EF
+namespace EF.biao
 {
     using System;
     using System.Data.Entity;
@@ -8,7 +8,7 @@ namespace EF
     public partial class Model1 : DbContext
     {
         public Model1()
-            : base("name=Model1")
+            : base("name=Model11")
         {
         }
 
@@ -25,6 +25,14 @@ namespace EF
 
             modelBuilder.Entity<BoyInfo>()
                 .Property(e => e.boySex)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<BoyInfo>()
+                .Property(e => e.boyfonle)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<BoyInfo>()
+                .Property(e => e.boymail)
                 .IsUnicode(false);
 
             modelBuilder.Entity<BoyInfo>()
@@ -61,6 +69,14 @@ namespace EF
 
             modelBuilder.Entity<GirlInfo>()
                 .Property(e => e.girlSex)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<GirlInfo>()
+                .Property(e => e.girfonle)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<GirlInfo>()
+                .Property(e => e.girmail)
                 .IsUnicode(false);
 
             modelBuilder.Entity<GirlInfo>()

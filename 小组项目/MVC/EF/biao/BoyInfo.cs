@@ -1,4 +1,4 @@
-namespace EF
+namespace EF.biao
 {
     using System;
     using System.Collections.Generic;
@@ -21,6 +21,14 @@ namespace EF
         public string boySex { get; set; }
 
         public int boyAge { get; set; }
+
+        [Required]
+        [StringLength(20)]
+        public string boyfonle { get; set; }
+
+        [Required]
+        [StringLength(50)]
+        public string boymail { get; set; }
 
         public int boyHeight { get; set; }
 

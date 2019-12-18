@@ -275,10 +275,11 @@
         $(function () {
             var ss = $("#span").text();
 
-            if (ss == "0") {
-                $("#laoban").css("display", "none");
-            } else {
+            if (ss == "1" || ss== null) {
                 $("#span").text("人员");
+               
+            } else {
+                $("#laoban").css("display", "none");
             }
         })
     </script>

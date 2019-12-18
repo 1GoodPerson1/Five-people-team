@@ -100,6 +100,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\EF.dll" />
+    <Content Include="bin\EF.pdb" />
     <Content Include="bin\EntityFramework.dll" />
     <Content Include="bin\EntityFramework.SqlServer.dll" />
     <Content Include="bin\EntityFramework.SqlServer.xml" />
@@ -181,6 +183,65 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\materialdesignicons-webfont.svg" />
     <Content Include="Global.asax" />
+    <Content Include="images\a1.png" />
+    <Content Include="images\a2.png" />
+    <Content Include="images\a3.png" />
+    <Content Include="images\b1.jpg" />
+    <Content Include="images\b10.jpg" />
+    <Content Include="images\b11.jpg" />
+    <Content Include="images\b12.jpg" />
+    <Content Include="images\b13.jpg" />
+    <Content Include="images\b2.jpg" />
+    <Content Include="images\b3.jpg" />
+    <Content Include="images\b4.jpg" />
+    <Content Include="images\b5.jpg" />
+    <Content Include="images\b6.jpg" />
+    <Content Include="images\b7.jpg" />
+    <Content Include="images\b8.jpg" />
+    <Content Include="images\b9.jpg" />
+    <Content Include="images\bg.jpg" />
+    <Content Include="images\bg2.jpg" />
+    <Content Include="images\close.png" />
+    <Content Include="images\favicon.png" />
+    <Content Include="images\g1.jpg" />
+    <Content Include="images\g2.jpg" />
+    <Content Include="images\g3.jpg" />
+    <Content Include="images\g4.jpg" />
+    <Content Include="images\g5.jpg" />
+    <Content Include="images\g6.jpg" />
+    <Content Include="images\g7.jpg" />
+    <Content Include="images\g8.jpg" />
+    <Content Include="images\img-sprite.png" />
+    <Content Include="images\logo.svg" />
+    <Content Include="images\m1.png" />
+    <Content Include="images\n1.jpg" />
+    <Content Include="images\n10.jpg" />
+    <Content Include="images\n11.jpg" />
+    <Content Include="images\n12.jpg" />
+    <Content Include="images\n1n.jpg" />
+    <Content Include="images\n2.jpg" />
+    <Content Include="images\n2n.jpg" />
+    <Content Include="images\n3.jpg" />
+    <Content Include="images\n3n.jpg" />
+    <Content Include="images\n4.jpg" />
+    <Content Include="images\n5.jpg" />
+    <Content Include="images\n6.jpg" />
+    <Content Include="images\n7.jpg" />
+    <Content Include="images\n8.jpg" />
+    <Content Include="images\n9.jpg" />
+    <Content Include="images\s1.jpg" />
+    <Content Include="images\s2.jpg" />
+    <Content Include="images\s3.jpg" />
+    <Content Include="images\s4.jpg" />
+    <Content Include="images\s5.jpg" />
+    <Content Include="images\s6.jpg" />
+    <Content Include="images\s7.jpg" />
+    <Content Include="images\s8.jpg" />
+    <Content Include="images\t1.jpg" />
+    <Content Include="images\t2.jpg" />
+    <Content Include="images\t3.jpg" />
+    <Content Include="images\t4.jpg" />
+    <Content Include="images\well.jpg" />
     <Content Include="image\1.jpg" />
     <Content Include="image\2.jpg" />
     <Content Include="image\bg2.jpg" />
@@ -289,6 +350,7 @@
     <Content Include="fonts\materialdesignicons-webfont.ttf" />
     <Content Include="fonts\materialdesignicons-webfont.woff" />
     <Content Include="fonts\materialdesignicons-webfont.woff2" />
+    <Content Include="bin\EF.dll.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -306,9 +368,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\INDEXController.cs" />
     <Compile Include="Controllers\ListController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PerInfoController.cs" />
+    <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -352,6 +416,8 @@
     <Content Include="vendors\iconfonts\mdi\scss\_path.scss" />
     <Content Include="vendors\iconfonts\mdi\scss\_variables.scss" />
     <Content Include="Views\PerInfo\Perinfo.cshtml" />
+    <Content Include="Views\INDEX\Index.cshtml" />
+    <Content Include="Views\Register\Register.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
