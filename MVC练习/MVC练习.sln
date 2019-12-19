@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.852
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC练习", "MVC练习\MVC练习.csproj", "{207B0329-9604-4C33-AFEB-7FD847BA5B9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{178D5EBC-0488-47BB-B07C-DB9F3B7A6D80}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{207B0329-9604-4C33-AFEB-7FD847BA5B9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{207B0329-9604-4C33-AFEB-7FD847BA5B9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{207B0329-9604-4C33-AFEB-7FD847BA5B9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{207B0329-9604-4C33-AFEB-7FD847BA5B9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{178D5EBC-0488-47BB-B07C-DB9F3B7A6D80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{178D5EBC-0488-47BB-B07C-DB9F3B7A6D80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{178D5EBC-0488-47BB-B07C-DB9F3B7A6D80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{178D5EBC-0488-47BB-B07C-DB9F3B7A6D80}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {58C65D75-8116-42A5-9ED7-AC7DB380A2CD}
+	EndGlobalSection
+EndGlobal

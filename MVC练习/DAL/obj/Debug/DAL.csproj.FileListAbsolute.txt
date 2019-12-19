@@ -1,0 +1,14 @@
+C:\Users\GXB\Desktop\MVC练习\DAL\bin\Debug\DAL.dll.config
+C:\Users\GXB\Desktop\MVC练习\DAL\bin\Debug\DAL.dll
+C:\Users\GXB\Desktop\MVC练习\DAL\bin\Debug\DAL.pdb
+C:\Users\GXB\Desktop\MVC练习\DAL\bin\Debug\EntityFramework.dll
+C:\Users\GXB\Desktop\MVC练习\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\GXB\Desktop\MVC练习\DAL\bin\Debug\EntityFramework.xml
+C:\Users\GXB\Desktop\MVC练习\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\GXB\Desktop\MVC练习\DAL\bin\Debug\zh-Hans\EntityFramework.resources.dll
+C:\Users\GXB\Desktop\MVC练习\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\GXB\Desktop\MVC练习\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\GXB\Desktop\MVC练习\DAL\obj\Debug\DAL.dll
+C:\Users\GXB\Desktop\MVC练习\DAL\obj\Debug\DAL.pdb
+C:\Users\GXB\Desktop\MVC练习\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\GXB\Desktop\MVC练习\DAL\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll

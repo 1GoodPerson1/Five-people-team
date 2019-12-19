@@ -1,0 +1,174 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+    <script src="~/js/jquery-1.7.js"></script>
+</head>
+<body>
+    <div>
+        <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+        @*<div id="main" style="width: 600px;height:400px;"></div>*@
+        <div id="chartmain" style="width: 600px;height:400px;"></div>
+        <div id="chartmain2" style="width: 600px;height:400px;"></div>
+        @*<script type="text/javascript">
+                // 基于准备好的dom，初始化echarts实例
+                var myChart = echarts.init(document.getElementById('main'));
+
+                // 指定图表的配置项和数据
+                var option = {
+
+                    xAxis: {
+                        data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
+                    },
+                    yAxis: {},
+                    series: [{
+                        type: 'bar',
+                        data: [5, 20, 36, 10, 10, 20]
+                    }]
+                };
+
+                // 使用刚指定的配置项和数据显示图表。
+                myChart.setOption(option);
+            </script>*@
+        <script type="text/javascript">
+            //初始化echarts
+            function chushihua(myChart) {
+                var option = {
+                    title: {
+                        text: '饼状图 数据统计'
+                    },
+                    series: [{
+                        name: '访问量',
+                        type: 'pie',
+                        radius: '90%',
+                        data: [
+                            { value: 0, name: '无' },
+                        ]
+                    }]
+                };
+
+                myChart.setOption(option);
+            }
+
+            //从数据库读取数据赋值给echarts
+            function fuzhi(myChart) {
+                $.ajax({
+                    url: "/dome2/sel",
+                    type: "post",
+                    dataType: "json",
+                    success: function (data) {
+                        console.log(data[0].ClassName)
+                        //创建一个数组，用来装对象传给series.data，因为series.data里面不能直接鞋for循环
+                        var servicedata = [];
+
+                        for (var i = 0; i < data.length; i++) {
+                            var obj = new Object();
+                            obj.name = data[i].ClassName;
+                            obj.value = data[i].Id;
+                            servicedata[i] = obj;
+                        }
+
+                        myChart.setOption({
+                            title: {
+                                text: '饼状图 数据统计'
+                            },
+                            series: [{
+                                name: '访问量',
+                                type: 'pie',
+                                radius: '60%',
+                                data: servicedata,
+                            }]
+
+                        });
+
+
+                    }
+                });
+            }
+
+            //初始化echarts实例 圆形
+            var myChart = echarts.init(document.getElementById('chartmain'));
+            chushihua(myChart);
+            fuzhi(myChart);
+
+
+
+            //初始化echarts
+            function chushihua2(myChart2) {
+                var option = {
+                    title: {
+                        text: '第一个 ECharts 实例'
+                    },
+                    xAxis: {
+                        data: []
+                    },
+                    yAxis: {},
+                    series: [{
+                        type: 'bar',
+                        data: []
+                    }]
+                };
+
+                myChart2.setOption(option);
+            }
+
+            //从数据库读取数据赋值给echarts
+            function fuzhi2(myChart2) {
+                $.ajax({
+                    url: "/dome2/longsel",
+                    type: "post",
+                    dataType: "json",
+                    success: function (data) {
+                        console.log(data[0].ClassName)
+                        //创建一个数组，用来装对象传给series.data，因为series.data里面不能直接鞋for循环
+                        var xzhou = [];
+                        var yzhou = [];
+                        for (var i = 0; i < data.length; i++) {
+                            var xobj = new Object();
+                            xobj = data[i].Name;
+                            xzhou[i] = xobj;
+                            var yobj = new Object();
+                            yobj = data[i].Age;
+                            yzhou[i] = yobj;
+
+                        }
+
+                        myChart2.setOption({
+                            title: {
+                                text: '柱状数据统计'
+                            },
+                            xAxis: {
+                                data: xzhou
+                            },
+                            yAxis: {},
+                            series: [{
+                                type: 'bar',
+                                data: yzhou
+                            }]
+
+                        });
+
+
+                    }
+                });
+            }
+
+            //初始化echarts实例 矩形
+            var myChart2 = echarts.init(document.getElementById('chartmain2'));
+            chushihua2(myChart2);
+            fuzhi2(myChart2);
+
+
+
+        </script>
+    </div>
+</body>
+</html>
