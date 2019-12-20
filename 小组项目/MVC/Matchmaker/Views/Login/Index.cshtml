@@ -80,7 +80,7 @@
                 var password = $("#exampleInputPassword1").val();
                 $.ajax({
                     url: "/Login/sel",
-                    dateType: "json",
+                    dataType: "json",
                     type: "post",
                     data: { "userName": name, "userPwd": password },
                     success: function (refult) {

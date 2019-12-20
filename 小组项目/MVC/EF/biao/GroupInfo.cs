@@ -1,4 +1,4 @@
-namespace EF.biao
+namespace EF
 {
     using System;
     using System.Collections.Generic;

@@ -11,7 +11,7 @@ create table loginUser(
    Userid int identity(1,1) primary key,--id  主键
    userName varchar(50) not null,--用户名
    userPwd varchar(100) not null, --用户密码
-   Userinfo bit check(Userinfo=0 or Userinfo=1 or Userinfo=2),--用户角色 男  女
+   Userinfo int check(Userinfo=0 or Userinfo=1),--用户角色 男  女
 )
 insert into loginUser values('libinhui@qq.com','123456',1)
 insert into loginUser values('baiyajun@qq.com','123456',0)

@@ -1,4 +1,4 @@
-namespace EF.biao
+namespace EF
 {
     using System;
     using System.Collections.Generic;
@@ -20,6 +20,6 @@ namespace EF.biao
         [StringLength(100)]
         public string userPwd { get; set; }
 
-        public bool? Userinfo { get; set; }
+        public int? Userinfo { get; set; }
     }
 }

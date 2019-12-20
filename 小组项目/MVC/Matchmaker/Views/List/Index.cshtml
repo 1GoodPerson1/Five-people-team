@@ -104,21 +104,21 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">
+                        <a class="nav-link" href="@Url.Action("Index","List")">
                             <span class="menu-title">首页</span>
                             <i class="mdi mdi-home menu-icon"></i>
                         </a>
                     </li>
-                    <li class="nav-item" id="laoban">
+                    <li class="nav-item" >
                         <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                            <span id="span" class="menu-title">@sesson</span>
+                            <span id="span" class="menu-title">人员</span>
                             <i class="menu-arrow"></i>
                             <i class="mdi mdi-crosshairs-gps menu-icon"></i>
                         </a>
                         <div class="collapse" id="ui-basic">
                             <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">男生</a></li>
-                                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">女生</a></li>
+                                <li class="nav-item" id="xingbie"> <a class="nav-link" id="nan" href="#">@sesson</a></li>
+                                <li class="nav-item" id="xingbie1"> <a class="nav-link" id="nv" href="#">@sesson</a></li>
                             </ul>
                         </div>
                     </li>
@@ -146,8 +146,8 @@
                             <div class="mt-4">
                                 
                                 <ul class="gradient-bullet-list mt-4">
-                                    <li>女</li>
-                                    <li>男</li>
+                                    <li id="nvxing">女</li>
+                                    <li id="nanxing">男</li>
                                 </ul>
                             </div>
                         </span>
@@ -479,13 +479,18 @@
     <script src="~/js/jquery-2.1.1.min.js"></script>
     <script type="text/javascript">
         $(function () {
-            var ss = $("#span").text();
-            
-            if (ss == "1" || ss == null) {
-                $("#span").text("人员");
-
-            } else {
-                $("#laoban").css("display", "none");
+            var nan = $("#nan").text();
+            var nv = $("#nv").text();
+            if (nan == "1") {
+                $("#nan").text("男性信息列表");
+                $("#nv").text("女性信息列表")
+                $("#xingbie").css("display", "none");
+                $("#nvxing").css("display", "none");
+            } else if (nv == "0") {
+                $("#nan").text("男性信息列表");
+                $("#nv").text("女性信息列表");
+                $("#xingbie1").css("display", "none");
+                $("#nanxing").css("display", "none");
             }
         })
     </script>

@@ -2,6 +2,7 @@
 @{
     Layout = null;
     int sesson = Convert.ToInt32(ViewData["sesson"]);
+    string name = Convert.ToString(ViewData["name"]);
 }
 
 <!DOCTYPE html>
@@ -53,7 +54,7 @@
                                 <span class="availability-status online"></span>
                             </div>
                             <div class="nav-profile-text">
-                                <p class="mb-1 text-black">登录名</p>
+                                <p class="mb-1 text-black">@name</p>
                             </div>
                         </a>
                         <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
@@ -62,9 +63,9 @@
                                 Activity Log
                             </a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">
+                            <a class="dropdown-item" href="@Url.Action("Index","Login")">
                                 <i class="mdi mdi-logout mr-2 text-primary"></i>
-                                Signout
+                                退出
                             </a>
                         </div>
                     </li>
@@ -103,21 +104,21 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">
+                        <a class="nav-link" href="@Url.Action("Index","List")">
                             <span class="menu-title">首页</span>
                             <i class="mdi mdi-home menu-icon"></i>
                         </a>
                     </li>
-                    <li class="nav-item" id="laoban">
+                    <li class="nav-item" id="laoban" >
                         <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                            <span id="span" class="menu-title">@sesson</span>
+                            <span id="span" class="menu-title">人员</span>
                             <i class="menu-arrow"></i>
                             <i class="mdi mdi-crosshairs-gps menu-icon"></i>
                         </a>
                         <div class="collapse" id="ui-basic">
                             <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">男生</a></li>
-                                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">女生</a></li>
+                                <li class="nav-item" id="xingbie"> <a class="nav-link" id="nan" href="pages/ui-features/buttons.html">@sesson</a></li>
+                                <li class="nav-item" id="xingbie1"> <a class="nav-link" id="nv" href="pages/ui-features/typography.html">@sesson</a></li>
                             </ul>
                         </div>
                     </li>
@@ -128,7 +129,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/tables/basic-table.html">
+                        <a class="nav-link" href="@Url.Action("Perinfo","PerInfo")">
                             <span class="menu-title">完善个人信息</span>
                             <i class="mdi mdi-format-list-bulleted menu-icon"></i>
                         </a>
@@ -140,14 +141,12 @@
                     <li class="nav-item sidebar-actions">
                         <span class="nav-link">
 
-                            <button class="btn btn-block btn-lg btn-gradient-primary mt-4">+ 添加成员</button>
+                           
                             <div class="mt-4">
-                                <div class="border-bottom">
-                                    <p class="text-secondary">适配</p>
-                                </div>
+                                
                                 <ul class="gradient-bullet-list mt-4">
-                                    <li>女</li>
-                                    <li>男</li>
+                                    <li id="nvxing">女</li>
+                                    <li id="nanxing">男</li>
                                 </ul>
                             </div>
                         </span>
@@ -171,7 +170,7 @@
                                             <div class="col-sm-4">
                                                 <div class="form-check">
                                                     <label class="form-check-label">
-                                                        <input type="radio" class="form-check-input" name="membershipRadios" id="membershipRadios1" value="" checked>
+                                                        <input type="radio" class="form-check-input" name="membershipRadios" id="membershipRadios1" value="男" checked>
                                                         男
                                                     </label>
                                                 </div>
@@ -179,7 +178,7 @@
                                             <div class="col-sm-5">
                                                 <div class="form-check">
                                                     <label class="form-check-label">
-                                                        <input type="radio" class="form-check-input" name="membershipRadios" id="membershipRadios2" value="option2">
+                                                        <input type="radio" class="form-check-input" name="membershipRadios" id="membershipRadios2" value="女">
                                                         女
                                                     </label>
                                                 </div>
@@ -189,43 +188,43 @@
 
                                     <div class="form-group">
                                         <label for="exampleInputEmail3">年龄</label>
-                                        <input type="text" class="form-control" id="exampleInputEmail3" placeholder="年龄">
+                                        <input type="text" class="form-control" id="nianling" placeholder="年龄">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputPassword4">手机号</label>
-                                        <input type="text" class="form-control" id="exampleInputPassword4" placeholder="手机号">
+                                        <input type="text" class="form-control" id="shoujihao" placeholder="手机号">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputPassword4">邮箱</label>
-                                        <input type="email" class="form-control" id="exampleInputPassword4" placeholder="邮箱">
+                                        <input type="email" class="form-control" id="youxaing" placeholder="邮箱" value="@name">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputPassword4">身高</label>
-                                        <input type="text" class="form-control" id="exampleInputPassword4" placeholder="身高">
+                                        <input type="text" class="form-control" id="shengao" placeholder="身高">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputPassword4">体重</label>
-                                        <input type="text" class="form-control" id="exampleInputPassword4" placeholder="体重">
+                                        <input type="text" class="form-control" id="tizhong" placeholder="体重">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputPassword4">工作</label>
-                                        <input type="text" class="form-control" id="exampleInputPassword4" placeholder="工作">
+                                        <input type="text" class="form-control" id="gongzuo" placeholder="工作">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputPassword4">薪资</label>
-                                        <input type="text" class="form-control" id="exampleInputPassword4" placeholder="薪资">
+                                        <input type="text" class="form-control" id="xinzi" placeholder="薪资">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputCity1">住址</label>
-                                        <input type="text" class="form-control" id="exampleInputCity1" placeholder="住址">
+                                        <input type="text" class="form-control" id="zhuzhi" placeholder="住址">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputPassword4">爱好</label>
-                                        <input type="text" class="form-control" id="exampleInputPassword4" placeholder="爱好">
+                                        <input type="text" class="form-control" id="aihao" placeholder="爱好">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleTextarea1">择偶标准</label>
-                                        <textarea class="form-control" id="exampleTextarea1" rows="4"></textarea>
+                                        <textarea class="form-control" id="biaozun" rows="4"></textarea>
                                     </div>
                                     <div class="form-group">
                                         <label>个人靓照</label>
@@ -239,7 +238,7 @@
                                     </div>
 
 
-                                    <button type="submit" class="btn btn-gradient-primary mr-2">Submit</button>
+                                    <button id="tijiao" type="submit" class="btn btn-gradient-primary mr-2">Submit</button>
                                     <button class="btn btn-light">Cancel</button>
                                 </form>
                             </div>
@@ -273,14 +272,59 @@
     <script src="~/js/jquery-2.1.1.min.js"></script>
     <script type="text/javascript">
         $(function () {
-            var ss = $("#span").text();
-
-            if (ss == "1" || ss== null) {
-                $("#span").text("人员");
-               
-            } else {
-                $("#laoban").css("display", "none");
+            var nan = $("#nan").text();
+            var nv = $("#nv").text();
+            if (nan == "1") {
+                $("#nan").text("男性信息列表");
+                $("#nv").text("女性信息列表")
+                $("#xingbie").css("display", "none");
+                $("#nvxing").css("display", "none");
+            } else if (nv == "0") {
+                $("#nan").text("男性信息列表");
+                $("#nv").text("女性信息列表");
+                $("#xingbie1").css("display", "none");
+                $("#nanxing").css("display", "none");
             }
+            $("#tijiao").click(function () {
+                var boyName = $("#exampleInputName1").val();
+                var boySex = $("input[type='radio']:checked").val();
+                var boyAge = $("#nianling").val();
+                var boyfonle = $("#shoujihao").val();
+                var boymail ="@name";
+                var boyHeight = $("#shengao").val();
+                var boyWeight = $("#tizhong").val();
+                var boyjob = $("#gongzuo").val();
+                var boyjobMoney = $("#xinzi").val();
+                var boyAddress = $("#zhuzhi").val();
+                var boyHobbly = $("#aihao").val();
+                var boymate = $("#biaozun").val();
+                //alert(boyName);
+                //alert(boySex);
+                //alert(boyAge);
+                //alert(boyfonle);
+                //alert(boymail);
+                //alert(boyHeight);
+                //alert(boyWeight);
+                //alert(boyjob);
+                //alert(boyjobMoney);
+                //alert(boyAddress);
+                //alert(boyHobbly);
+                //alert(boymate);
+                $.ajax({
+                    url: "/PerInfo/Add",
+                    dataType: "json",
+                    type: "post",
+                    data: { "boyName": boyName, "boySex": boySex, "boyAge": boyAge, "boyfonle": boyfonle, "boymail": boymail, "boyHeight": boyHeight, "boyWeight": boyWeight, "boyjob": boyjob, "boyjobMoney": boyjobMoney, "boyAddress": boyAddress, "boyHobbly": boyHobbly, "boymate": boymate, },
+                    success: function (refult) {
+                        if (refult == 0) {
+                            alert("保存失败！");
+                        } else if (refult == 1) {
+                            alert("保存成功");
+                            window.location.href = "/PerInfo/Perinfo";
+                        }
+                    }
+                })
+            })
         })
     </script>
 </body>

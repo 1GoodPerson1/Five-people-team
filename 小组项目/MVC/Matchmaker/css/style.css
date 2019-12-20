@@ -18538,21 +18538,17 @@ html {
   }
 }
 
+
 .content-wrapper {
-  background-image:url(../image/n3.jpg) ;
-  background-size:100% 100%;
-  background-repeat:no-repeat;
-  padding: 2.75rem 2.25rem;
-  width: 100%;
-  -webkit-flex-grow: 1;
-  flex-grow: 1;
+    background: #f2edf3;
+    padding: 2.75rem 2.25rem;
+    width: 100%;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
 }
 
 .container-scroller {
     overflow: hidden;
-    background: url(../image/n3.jpg) no-repeat;
-    width:100%;
-    height:100%;
 }
 
 pre {

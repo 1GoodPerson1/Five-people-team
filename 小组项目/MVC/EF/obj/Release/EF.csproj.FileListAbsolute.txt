@@ -1,0 +1,15 @@
+C:\Users\李彬辉\Desktop\Five-people-team\小组项目\MVC\EF\bin\Release\EF.dll.config
+C:\Users\李彬辉\Desktop\Five-people-team\小组项目\MVC\EF\bin\Release\EF.dll
+C:\Users\李彬辉\Desktop\Five-people-team\小组项目\MVC\EF\bin\Release\EF.pdb
+C:\Users\李彬辉\Desktop\Five-people-team\小组项目\MVC\EF\bin\Release\EntityFramework.dll
+C:\Users\李彬辉\Desktop\Five-people-team\小组项目\MVC\EF\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\李彬辉\Desktop\Five-people-team\小组项目\MVC\EF\bin\Release\log4net.dll
+C:\Users\李彬辉\Desktop\Five-people-team\小组项目\MVC\EF\bin\Release\EntityFramework.xml
+C:\Users\李彬辉\Desktop\Five-people-team\小组项目\MVC\EF\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\李彬辉\Desktop\Five-people-team\小组项目\MVC\EF\bin\Release\log4net.xml
+C:\Users\李彬辉\Desktop\Five-people-team\小组项目\MVC\EF\bin\Release\zh-Hans\EntityFramework.resources.dll
+C:\Users\李彬辉\Desktop\Five-people-team\小组项目\MVC\EF\obj\Release\EF.csprojAssemblyReference.cache
+C:\Users\李彬辉\Desktop\Five-people-team\小组项目\MVC\EF\obj\Release\EF.csproj.CoreCompileInputs.cache
+C:\Users\李彬辉\Desktop\Five-people-team\小组项目\MVC\EF\obj\Release\EF.csproj.CopyComplete
+C:\Users\李彬辉\Desktop\Five-people-team\小组项目\MVC\EF\obj\Release\EF.dll
+C:\Users\李彬辉\Desktop\Five-people-team\小组项目\MVC\EF\obj\Release\EF.pdb
