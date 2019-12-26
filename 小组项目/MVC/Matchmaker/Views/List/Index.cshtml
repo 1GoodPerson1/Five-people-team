@@ -12,7 +12,7 @@
     <title>Home</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="~/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="~/css/materialdesignicons.css.map">
+    @*<link rel="stylesheet" href="~/css/materialdesignicons.css.map">*@
     <link rel="stylesheet" href="~/css/vendor.bundle.base.css">
     <!-- endinject -->
     <!-- inject:css -->
@@ -20,7 +20,8 @@
     <!-- endinject -->
     <link rel="shortcut icon" href="~/image/favicon.png" />
     <title>Index</title>
-
+    <script src="~/js/jquery-2.1.1.min.js"></script>
+    <script src="~/js/vendor.bundle.base.js"></script>
 </head>
 <body>
     @sesson
@@ -216,112 +217,7 @@
                         </div>
                     </div>
                   
-                    <div class="row">
-                        <div class="col-12 grid-margin">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title">Recent Tickets</h4>
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <thead>
-                                                <tr>
-                                                    <th>
-                                                        Assignee
-                                                    </th>
-                                                    <th>
-                                                        Subject
-                                                    </th>
-                                                    <th>
-                                                        Status
-                                                    </th>
-                                                    <th>
-                                                        Last Update
-                                                    </th>
-                                                    <th>
-                                                        Tracking ID
-                                                    </th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>
-                                                        <img src="~/image/faces/face1.jpg" class="mr-2" alt="image">
-                                                        David Grey
-                                                    </td>
-                                                    <td>
-                                                        Fund is not recieved
-                                                    </td>
-                                                    <td>
-                                                        <label class="badge badge-gradient-success">DONE</label>
-                                                    </td>
-                                                    <td>
-                                                        Dec 5, 2017
-                                                    </td>
-                                                    <td>
-                                                        WD-12345
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <img src="~/image/faces/face2.jpg" class="mr-2" alt="image">
-                                                        Stella Johnson
-                                                    </td>
-                                                    <td>
-                                                        High loading time
-                                                    </td>
-                                                    <td>
-                                                        <label class="badge badge-gradient-warning">PROGRESS</label>
-                                                    </td>
-                                                    <td>
-                                                        Dec 12, 2017
-                                                    </td>
-                                                    <td>
-                                                        WD-12346
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <img src="~/image/faces/face3.jpg" class="mr-2" alt="image">
-                                                        Marina Michel
-                                                    </td>
-                                                    <td>
-                                                        Website down for one week
-                                                    </td>
-                                                    <td>
-                                                        <label class="badge badge-gradient-info">ON HOLD</label>
-                                                    </td>
-                                                    <td>
-                                                        Dec 16, 2017
-                                                    </td>
-                                                    <td>
-                                                        WD-12347
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <img src="~/image/faces/face4.jpg" class="mr-2" alt="image">
-                                                        John Doe
-                                                    </td>
-                                                    <td>
-                                                        Loosing control on server
-                                                    </td>
-                                                    <td>
-                                                        <label class="badge badge-gradient-danger">REJECTED</label>
-                                                    </td>
-                                                    <td>
-                                                        Dec 3, 2017
-                                                    </td>
-                                                    <td>
-                                                        WD-12348
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
                     
                     <div class="row">
                         <div class="col-md-12 grid-margin stretch-card">
@@ -329,123 +225,193 @@
                                 <div class="card-body">
                                     <h4 class="card-title">Project Status</h4>
                                     <div class="table-responsive">
-                                        <table class="table">
+                                        <table id="ListTb" class="table">
                                             <thead>
                                                 <tr>
                                                     <th>
-                                                        #
+                                                        编号
                                                     </th>
                                                     <th>
-                                                        Name
+                                                        用户名
                                                     </th>
                                                     <th>
-                                                        Due Date
+                                                        账号密码
                                                     </th>
                                                     <th>
-                                                        Progress
+                                                        性别
                                                     </th>
                                                 </tr>
                                             </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>
-                                                        1
-                                                    </td>
-                                                    <td>
-                                                        Herman Beck
-                                                    </td>
-                                                    <td>
-                                                        May 15, 2015
-                                                    </td>
-                                                    <td>
-                                                        <div class="progress">
-                                                            <div class="progress-bar bg-gradient-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        2
-                                                    </td>
-                                                    <td>
-                                                        Messsy Adam
-                                                    </td>
-                                                    <td>
-                                                        Jul 01, 2015
-                                                    </td>
-                                                    <td>
-                                                        <div class="progress">
-                                                            <div class="progress-bar bg-gradient-danger" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        3
-                                                    </td>
-                                                    <td>
-                                                        John Richards
-                                                    </td>
-                                                    <td>
-                                                        Apr 12, 2015
-                                                    </td>
-                                                    <td>
-                                                        <div class="progress">
-                                                            <div class="progress-bar bg-gradient-warning" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        4
-                                                    </td>
-                                                    <td>
-                                                        Peter Meggik
-                                                    </td>
-                                                    <td>
-                                                        May 15, 2015
-                                                    </td>
-                                                    <td>
-                                                        <div class="progress">
-                                                            <div class="progress-bar bg-gradient-primary" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        5
-                                                    </td>
-                                                    <td>
-                                                        Edward
-                                                    </td>
-                                                    <td>
-                                                        May 03, 2015
-                                                    </td>
-                                                    <td>
-                                                        <div class="progress">
-                                                            <div class="progress-bar bg-gradient-danger" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        5
-                                                    </td>
-                                                    <td>
-                                                        Ronald
-                                                    </td>
-                                                    <td>
-                                                        Jun 05, 2015
-                                                    </td>
-                                                    <td>
-                                                        <div class="progress">
-                                                            <div class="progress-bar bg-gradient-info" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
                                         </table>
+                                        <div class="pagebox" style="height:30px;" id="box"></div>
+                                        <script id="dataList" type="text/x-jquery-tmpl">
+                                            {{each Data}}
+                                            <tr>
+                                                <td>${Userid }</td>
+                                                <td>${userName }</td>
+                                                <td>${userPwd }</td>
+                                                <td>${Userinfo }</td>
+                                                <td>
+                                                    <input id="Button3" type="button" value="编辑" />
+                                                    <input id="Button4" type="button" value="删除" />
+                                                </td>
+                                            </tr>
+                                            {{/each}}
+                                        </script>
+                                        <input id="Button1" type="button" value="api查询登录用户表" />
+                                        <table id="ListTb1" class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        编号
+                                                    </th>
+                                                    <th>
+                                                        姓名
+                                                    </th>
+                                                    <th>
+                                                        性别
+                                                    </th>
+                                                    <th>
+                                                        年龄
+                                                    </th>
+                                                    <th>
+                                                        手机号
+                                                    </th>
+                                                    <th>
+                                                        邮箱
+                                                    </th>
+                                                    <th>
+                                                        身高
+                                                    </th>
+                                                    <th>
+                                                        体重
+                                                    </th>
+                                                    <th>
+                                                        工作
+                                                    </th>
+                                                    <th>
+                                                        薪资
+                                                    </th>
+                                                    <th>
+                                                        住址
+                                                    </th>
+                                                    <th>
+                                                        爱好
+                                                    </th>
+                                                    <th>
+                                                        择偶标准
+                                                    </th>
+                                                    <th>
+                                                        操作
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                        <div class="pagebox" style="height:30px;" id="box"></div>
+                                        <script id="dataList1" type="text/x-jquery-tmpl">
+                                            {{each Data}}
+                                            <tr>
+                                                <td>${boyid }</td>
+                                                <td>${boyName }</td>
+                                                <td>${boySex }</td>
+                                                <td>${boyAge }</td>
+                                                <td>${boyfonle }</td>
+                                                <td>${boymail }</td>
+                                                <td>${boyHeight }</td>
+                                                <td>${boyWeight }</td>
+                                                <td>${boyjob }</td>
+                                                <td>${boyjobMoney }</td>
+                                                <td>${boyAddreess }</td>
+                                                <td>${boyHobbly }</td>
+                                                <td>${boymate }</td>
+                                                <td>
+                                                    <input id="Button3" type="button" value="编辑" />
+                                                    <input id="Button4" type="button" value="删除" />
+                                                </td>
+                                            </tr>
+                                            {{/each}}
+                                        </script>
+                                        <input id="Button2" type="button" value="api查询男性表" />
+                                        <table id="ListTb2" class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        编号
+                                                    </th>
+                                                    <th>
+                                                        姓名
+                                                    </th>
+                                                    <th>
+                                                        性别
+                                                    </th>
+                                                    <th>
+                                                        年龄
+                                                    </th>
+                                                    <th>
+                                                        手机号
+                                                    </th>
+                                                    <th>
+                                                        邮箱
+                                                    </th>
+                                                    <th>
+                                                        身高
+                                                    </th>
+                                                    <th>
+                                                        体重
+                                                    </th>
+                                                    <th>
+                                                        工作
+                                                    </th>
+                                                    <th>
+                                                        薪资
+                                                    </th>
+                                                    <th>
+                                                        住址
+                                                    </th>
+                                                    <th>
+                                                        爱好
+                                                    </th>
+                                                    <th>
+                                                        择偶标准
+                                                    </th>
+                                                    <th>
+                                                        操作
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                        <div class="pagebox" style="height:30px;" id="box"></div>
+                                        <script id="dataList2" type="text/x-jquery-tmpl">
+                                            {{each Data}}
+                                            <tr>
+                                                <td>${girlid }</td>
+                                                <td>${girlName}</td>
+                                                <td>${girlSex }</td>
+                                                <td>${girlAge }</td>
+                                                <td>${girlfonle }</td>
+                                                <td>${girlmail }</td>
+                                                <td>${girlHeight }</td>
+                                                <td>${girlWeight }</td>
+                                                <td>${girljob }</td>
+                                                <td>${girljobMoney }</td>
+                                                <td>${girlAddress }</td>
+                                                <td>${girlHobbly }</td>
+                                                <td>${girlmate }</td>
+                                                <td>
+                                                    <input id="Button3" type="button" value="编辑" />
+                                                    <input id="Button4" type="button" value="删除" />
+                                                </td>
+                                            </tr>
+                                            {{/each}}
+                                        </script>
+                                        <input id="Button3" type="button" value="api查询女性表" />
                                     </div>
+                                    
+                                </div>
+                                
+                                
+                            </div>
+                                </div>
                                 </div>
                             </div>
                         </div>
@@ -456,15 +422,16 @@
                 <footer class="footer">
                  
                 </footer>
+    
                 <!-- partial -->
-            </div>
+            
             <!-- main-panel ends -->
-        </div>
+       
         <!-- page-body-wrapper ends -->
-    </div>
+    
     <!-- container-scroller -->
     <!-- plugins:js -->
-    <script src="~/js/vendor.bundle.base.js"></script>
+    
     <script src="~/js/vendor.bundle.addons.js"></script>
     <!-- endinject -->
     <!-- Plugin js for this page-->
@@ -476,14 +443,15 @@
     <!-- Custom js for this page-->
     <script src="~/js/dashboard.js"></script>
     <!-- End custom js for this page-->
-    <script src="~/js/jquery-2.1.1.min.js"></script>
+    
+    <script src="~/js/jquery.tmpl.js"></script>
     <script type="text/javascript">
         $(function () {
             var nan = $("#nan").text();
             var nv = $("#nv").text();
             if (nan == "1") {
                 $("#nan").text("男性信息列表");
-                $("#nv").text("女性信息列表")
+                $("#nv").text("女性信息列表");
                 $("#xingbie").css("display", "none");
                 $("#nvxing").css("display", "none");
             } else if (nv == "0") {
@@ -492,6 +460,37 @@
                 $("#xingbie1").css("display", "none");
                 $("#nanxing").css("display", "none");
             }
+            var url = "http://localhost:50458"
+            $("#Button1").click(function () {
+                $.ajax({
+                    url: url + "/api/Default",
+                    type: "get",
+                    success: function (data2) {
+                        $("#ListTb tr:gt(0)").remove();
+                        $("#dataList").tmpl(data2).appendTo("#ListTb");
+                    }
+                })
+            })
+            $("#Button2").click(function () {
+                $.ajax({
+                    url: url + "/api/Boy",
+                    type: "get",
+                    success: function (data2) {
+                        $("#ListTb1 tr:gt(0)").remove();
+                        $("#dataList1").tmpl(data2).appendTo("#ListTb1");
+                    }
+                })
+            })
+            $("#Button3").click(function () {
+                $.ajax({
+                    url: url + "/api/Girl",
+                    type: "get",
+                    success: function (data2) {
+                        $("#ListTb2 tr:gt(0)").remove();
+                        $("#dataList2").tmpl(data2).appendTo("#ListTb2");
+                    }
+                })
+            })
         })
     </script>
 </body>

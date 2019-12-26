@@ -32,5 +32,34 @@ namespace EF
             db.BoyInfo.Add(boy);
             return db.SaveChanges();
         }
+        public List<BoyInfo> BoyInfo()
+        {
+            Model2 db = new Model2();
+            return db.BoyInfo.ToList();
+        }
+        public int delete(int id)
+        {
+            Model2 db = new Model2();
+            int result = db.Database.ExecuteSqlCommand("delete from BoyInfo where boyid=@boyid", new SqlParameter("@boyid", id));
+            return result;
+        }
+        public static List<loginUser> sellogin()
+        {
+            Model2 db = new Model2();
+            List<loginUser> list = db.Database.SqlQuery<loginUser>("select * from loginUser").ToList();
+            return list;
+        }
+        public static List<BoyInfo> selboy()
+        {
+            Model2 db = new Model2();
+            List<BoyInfo> list = db.Database.SqlQuery<BoyInfo>("select * from BoyInfo").ToList();
+            return list;
+        }
+        public static List<GirlInfo> selgirl()
+        {
+            Model2 db = new Model2();
+            List<GirlInfo> list = db.Database.SqlQuery<GirlInfo>("select * from GirlInfo").ToList();
+            return list;
+        }
     }
 }
