@@ -26,3 +26,5 @@ C:\Users\李彬辉\Desktop\Five-people-team\小组项目\MVC\EF\obj\Debug\EF.csp
 C:\Users\李彬辉\Desktop\Five-people-team\小组项目\MVC\EF\obj\Debug\EF.csproj.CopyComplete
 C:\Users\李彬辉\Desktop\Five-people-team\小组项目\MVC\EF\obj\Debug\EF.dll
 C:\Users\李彬辉\Desktop\Five-people-team\小组项目\MVC\EF\obj\Debug\EF.pdb
+C:\Users\李彬辉\Desktop\Five-people-team\小组项目\MVC\EF\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+C:\Users\李彬辉\Desktop\Five-people-team\小组项目\MVC\EF\obj\Debug\EF.csprojAssemblyReference.cache

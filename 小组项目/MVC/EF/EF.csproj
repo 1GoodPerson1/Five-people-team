@@ -57,7 +57,7 @@
     <Compile Include="biao\GirlInfo.cs" />
     <Compile Include="biao\GroupInfo.cs" />
     <Compile Include="biao\loginUser.cs" />
-    <Compile Include="biao\Model1.cs" />
+    <Compile Include="biao\Model2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserDal.cs" />
   </ItemGroup>

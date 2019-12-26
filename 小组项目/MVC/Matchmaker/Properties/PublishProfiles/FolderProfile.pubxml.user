@@ -6,17 +6,17 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>C:\Users\李彬辉\Desktop\Five-people-team\小组项目</_PublishTargetUrl>
+    <_PublishTargetUrl>C:\Users\李彬辉\Desktop\Five-people-team\小组项目\MVC\Matchmaker</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/EF.dll">
-      <publishTime>12/20/2019 09:47:33</publishTime>
+      <publishTime>12/23/2019 16:28:41</publishTime>
     </File>
     <File Include="bin/EF.dll.config">
       <publishTime>12/19/2019 09:19:44</publishTime>
     </File>
     <File Include="bin/EF.pdb">
-      <publishTime>12/20/2019 09:47:33</publishTime>
+      <publishTime>12/23/2019 16:28:41</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>12/17/2019 15:55:08</publishTime>
@@ -28,13 +28,13 @@
       <publishTime>12/17/2019 15:55:08</publishTime>
     </File>
     <File Include="bin/Matchmaker.dll">
-      <publishTime>12/20/2019 09:55:27</publishTime>
+      <publishTime>12/23/2019 16:37:13</publishTime>
     </File>
     <File Include="bin/Matchmaker.dll.config">
       <publishTime>12/19/2019 09:20:26</publishTime>
     </File>
     <File Include="bin/Matchmaker.pdb">
-      <publishTime>12/20/2019 09:55:27</publishTime>
+      <publishTime>12/23/2019 16:37:13</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>12/17/2019 15:55:08</publishTime>
@@ -822,6 +822,9 @@
     <File Include="vendors/js/vendor.bundle.base.js">
       <publishTime>12/17/2019 14:24:06</publishTime>
     </File>
+    <File Include="Views/BoyList/Index.cshtml">
+      <publishTime>12/23/2019 14:03:22</publishTime>
+    </File>
     <File Include="Views/INDEX/Index.cshtml">
       <publishTime>12/18/2019 10:14:30</publishTime>
     </File>
@@ -835,7 +838,7 @@
       <publishTime>12/19/2019 09:28:10</publishTime>
     </File>
     <File Include="Views/Register/Register.cshtml">
-      <publishTime>12/18/2019 19:17:56</publishTime>
+      <publishTime>12/23/2019 14:28:40</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
       <publishTime>12/16/2019 18:51:22</publishTime>
