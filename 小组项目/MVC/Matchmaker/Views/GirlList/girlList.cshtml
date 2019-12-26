@@ -1,0 +1,280 @@
+﻿
+@{
+    Layout = null;
+    int sesson = Convert.ToInt32(ViewData["sesson"]);
+    string name = Convert.ToString(ViewData["name"]);
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>女生列表</title>
+
+
+    <link rel="stylesheet" href="~/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="~/css/materialdesignicons.css.map">
+    <link rel="stylesheet" href="~/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="~/css/style.css">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="~/image/favicon.png" />
+    <script src="~/js/jquery-2.1.1.min.js"></script>
+    <script src="~/js/vendor.bundle.base.js"></script>
+</head>
+<body>
+    @sesson
+    @if (sesson == 0)
+    {
+
+    }
+
+    <div class="container-scroller">
+        @* 导航框架 *@
+        <!-- partial:partials/_navbar.html -->
+        <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+            <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+                <a class="navbar-brand brand-logo" href="index.html"><img src="~/image/logo.svg" alt="logo" /></a>
+                <a class="navbar-brand brand-logo-mini" href="index.html"><img src="~/image/logo-mini.svg" alt="logo" /></a>
+            </div>
+            <div class="navbar-menu-wrapper d-flex align-items-stretch">
+                <div class="search-field d-none d-md-block">
+                    <form class="d-flex align-items-center h-100" action="#">
+                        <div class="input-group">
+                            <div class="input-group-prepend bg-transparent">
+                                <i class="input-group-text border-0 mdi mdi-magnify"></i>
+                            </div>
+                            <input type="text" class="form-control bg-transparent border-0" placeholder="找你喜欢的(❤ ω ❤)">
+                        </div>
+                    </form>
+                </div>
+                <ul class="navbar-nav navbar-nav-right">
+                    <li class="nav-item nav-profile dropdown">
+                        <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                            <div class="nav-profile-img">
+                                <img src="~/image/faces/face1.jpg" alt="image">
+                                <span class="availability-status online"></span>
+                            </div>
+                            <div class="nav-profile-text">
+                                <p class="mb-1 text-black">@name</p>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
+                            <a class="dropdown-item" href="#">
+                                <i class="mdi mdi-cached mr-2 text-success"></i>
+                                Activity Log
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="@Url.Action("Index","Login")">
+                                <i class="mdi mdi-logout mr-2 text-primary"></i>
+                                退出
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item nav-logout d-none d-lg-block">
+                        <a class="nav-link" href="#">
+                            <i class="mdi mdi-power"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item nav-settings d-none d-lg-block">
+                        <a class="nav-link" href="#">
+                            <i class="mdi mdi-format-line-spacing"></i>
+                        </a>
+                    </li>
+                </ul>
+                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+                    <span class="mdi mdi-menu"></span>
+                </button>
+            </div>
+        </nav>
+        <!-- partial -->
+        <div class="container-fluid page-body-wrapper">
+            <!-- partial:partials/_sidebar.html -->
+            <nav class="sidebar sidebar-offcanvas" id="sidebar">
+                <ul class="nav">
+                    <li class="nav-item nav-profile">
+                        <a href="#" class="nav-link">
+                            <div class="nav-profile-image">
+                                <img src="~/image/faces/face1.jpg" alt="profile">
+                                <span class="login-status online"></span> <!--change to offline or busy as needed-->
+                            </div>
+                            <div class="nav-profile-text d-flex flex-column">
+                                <span class="font-weight-bold mb-2">登录名</span>
+                                <span class="text-secondary text-small">性别</span>
+                            </div>
+                            <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Index","List")">
+                            <span class="menu-title">首页</span>
+                            <i class="mdi mdi-home menu-icon"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item" id="laoban">
+                        <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                            <span id="span" class="menu-title">人员</span>
+                            <i class="menu-arrow"></i>
+                            <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                        </a>
+                        <div class="collapse" id="ui-basic">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item" id="xingbie"> <a class="nav-link" id="nan" href="~/BOY/boyList">@sesson</a></li>
+                                <li class="nav-item" id="xingbie1"> <a class="nav-link" id="nv" href="~/GirlList/girlList.cshtml">@sesson</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/icons/mdi.html">
+                            <span class="menu-title">成功</span>
+                            <i class="mdi mdi-contacts menu-icon"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Perinfo","PerInfo")">
+                            <span class="menu-title">完善个人信息</span>
+                            <i class="mdi mdi-format-list-bulleted menu-icon"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item sidebar-actions">
+                        <span class="nav-link">
+
+
+                            <div class="mt-4">
+
+                                <ul class="gradient-bullet-list mt-4">
+                                    <li id="nvxing">女</li>
+                                    <li id="nanxing">男</li>
+                                </ul>
+                            </div>
+                        </span>
+                    </li>
+                </ul>
+            </nav>
+            @* 内容 *@
+            <div>
+                <div class="pagebox"></div>
+                <table id="ListTb2" class="table">
+                    <thead>
+                        <tr>
+                            @*<th>
+                                编号
+                            </th>*@
+                            <th>
+                                姓名
+                            </th>
+                            <th>
+                                性别
+                            </th>
+                            <th>
+                                年龄
+                            </th>
+                            @*<th>
+                                手机号
+                            </th>*@
+                            @*<th>
+                                邮箱
+                            </th>*@
+                            <th>
+                                身高/cm
+                            </th>
+                            <th>
+                                体重/kg
+                            </th>
+                            <th>
+                                工作
+                            </th>
+                            <th>
+                                薪资
+                            </th>
+                            <th>
+                                住址
+                            </th>
+                            <th>
+                                爱好
+                            </th>
+                            <th>
+                                择偶标准
+                            </th>
+                            <th>
+                                操作
+                            </th>
+                        </tr>
+                    </thead>
+
+                </table>
+                <div class="pagebox" style="height:30px;" id="box"></div>
+                <script id="dataList2" type="text/x-jquery-tmpl">
+                    {{each Data}}
+                    <tr>
+                        @*<td>${girlid }</td>*@
+                        <td>${girlName}</td>
+                        <td>${girlSex }</td>
+                        <td>${girlAge }</td>
+                        @*<td>${girlfonle }</td>*@
+                        @*<td>${girlmail }</td>*@
+                        <td>${girlHeight }</td>
+                        <td>${girlWeight }</td>
+                        <td>${girljob }</td>
+                        <td>${girljobMoney }</td>
+                        <td>${girlAddress }</td>
+                        <td>${girlHobbly }</td>
+                        <td>${girlmate }</td>
+                        <td>
+                            <input id="Button3" type="button" value="编辑" />
+                            <input id="Button4" type="button" value="删除" />
+                        </td>
+                    </tr>
+                    {{/each }}
+                </script>
+                <input id="Button3" type="button" value="api查询女性表" />
+            </div>
+        </div>
+        <script src="~/js/vendor.bundle.addons.js"></script>
+        <!-- endinject -->
+        <!-- Plugin js for this page-->
+        <!-- End plugin js for this page-->
+        <!-- inject:js -->
+        <script src="~/js/off-canvas.js"></script>
+        <script src="~/js/misc.js"></script>
+        <!-- endinject -->
+        <!-- Custom js for this page-->
+        <script src="~/js/dashboard.js"></script>
+        <!-- End custom js for this page-->
+
+        <script src="~/js/jquery.tmpl.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                var nan = $("#nan").text();
+                var nv = $("#nv").text();
+                if (nan == "1") {
+                    $("#nan").text("男性信息列表");
+                    $("#nv").text("女性信息列表");
+                    $("#xingbie").css("display", "none");
+                    $("#nvxing").css("display", "none");
+                } else if (nv == "0") {
+                    $("#nan").text("男性信息列表");
+                    $("#nv").text("女性信息列表");
+                    $("#xingbie1").css("display", "none");
+                    $("#nanxing").css("display", "none");
+                }
+                var url = "http://localhost:50458"
+            
+             
+                $("#Button3").click(function () {
+                    $.ajax({
+                        url: url + "/api/Girl",
+                        type: "get",
+                        success: function (data2) {
+                            $("#ListTb2 tr:gt(0)").remove();
+                            $("#dataList2").tmpl(data2).appendTo("#ListTb2");
+                        }
+                    })
+                })
+            })
+        </script>
+
+</body>
+</html>
